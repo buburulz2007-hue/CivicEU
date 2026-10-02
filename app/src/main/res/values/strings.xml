@@ -1,0 +1,208 @@
+<resources>
+    <string name="app_name">Civic</string>
+    <string name="home_slogan">Implică-te pentru o comunitate mai curată</string>
+    <string name="new_report">Sesizare Nouă</string>
+    <string name="search_placeholder">Caută sesizări...</string>
+    <string name="recent_reports">Sesizări Recente</string>
+    <string name="no_reports_title">Nu există sesizări încă</string>
+    <string name="no_reports_desc">Fii primul care ia atitudine! Raportările tale ajută la combaterea corupției.</string>
+    <string name="sent_by">Trimis de: %1$s</string>
+    <string name="phone_short">Tel: %1$s</string>
+
+    <string name="incident_details">Detaliile Incidentului</string>
+    <string name="title_label">Ce s-a întâmplat?</string>
+    <string name="title_placeholder">Ex: Mită la spitalul central</string>
+    <string name="category_label">Categorie</string>
+    <string name="category_placeholder">Ex: Sănătate, Educație, Administrație</string>
+    <string name="description_label">Descriere detaliată</string>
+    <string name="description_placeholder">Povestește ce s-a întâmplat, cine a fost implicat...</string>
+
+    <string name="who_are_you">Cine ești tu?</string>
+    <string name="warning_anonymous">Atenție: Sesizările anonime au șanse mult mai mici de a fi investigate oficial.</string>
+    <string name="name_label">Nume și Prenume (Opțional)</string>
+    <string name="name_placeholder">Ion Popescu</string>
+    <string name="address_label">Adresă (Opțional)</string>
+    <string name="address_placeholder">Str. Libertății, Nr. 1, București</string>
+    <string name="phone_label">Număr de Telefon (Opțional)</string>
+    <string name="phone_placeholder">07xx xxx xxx</string>
+
+    <string name="save_locally">Salvează în aplicație</string>
+    <string name="send_to_agency">Trimite la %1$s</string>
+    <string name="select_agency">Selectează Agenția</string>
+    <string name="target_agency">Agenția Destinatară</string>
+
+    <string name="email_salutation">DOMNULE PROCUROR ȘEF,</string>
+    <string name="email_intro">Subsemnatul/a, %1$s, cu domiciliul în %2$s, având numărul de telefon: %3$s, vă aduc la cunoștință următoarea sesizare privind fapte de corupție:</string>
+    <string name="email_report_title">TITLU: %1$s</string>
+    <string name="email_report_category">CATEGORIE: %1$s</string>
+    <string name="email_report_desc">DESCRIEREA FAPTELOR:</string>
+    <string name="email_footer">Prezenta sesizare a fost generată prin aplicația Civic.</string>
+    <string name="email_date">Data: %1$s</string>
+    <string name="email_subject">SESIZARE CORUPȚIE: %1$s</string>
+    <string name="unspecified">[NESPECIFICAT]</string>
+    <string name="back">Înapoi</string>
+    <string name="change_language">Schimbă Limba</string>
+    <string name="language_ro">Română</string>
+    <string name="language_en">Engleză</string>
+    <string name="language_fr">Franceză</string>
+    <string name="language_de">Germană</string>
+    <string name="language_es">Spaniolă</string>
+    <string name="language_it">Italiană</string>
+    <string name="debug_logs">Jurnale Debug</string>
+    <string name="clear_logs">Șterge Jurnalele</string>
+    <string name="no_logs">Nu există jurnale salvate.</string>
+    <string name="terms_title">Termeni și Condiții</string>
+    <string name="terms_accept">Accept Termenii și Condițiile</string>
+    <string name="terms_error">Trebuie să accepți termenii pentru a continua.</string>
+    <string name="terms_content">
+        1. Această aplicație (Civic) este un instrument de facilitare a sesizărilor către autoritățile anticorupție.\n\n
+        2. Utilizatorul este singurul responsabil pentru veridicitatea informațiilor furnizate.\n\n
+        3. Aplicația nu stochează datele pe servere externe. Sesizările sunt salvate local sau trimise prin e-mailul personal al utilizatorului.\n\n
+        4. Trimiterea de informații false poate atrage răspunderea juridică conform legislației în vigoare.\n\n
+        5. Prin utilizarea butonului "Trimite la DNA/Agenție", sunteți de acord ca datele introduse să fie incluse în e-mailul expediat.
+    </string>
+
+    <string name="e2e_evidence_title">Dovezi Criptate End-to-End</string>
+    <string name="e2e_evidence_info">Toate fișierele (PDF-uri, poze, înregistrări audio) sunt criptate AES-256-GCM direct pe dispozitivul tău înainte de salvare sau trimitere. Nici măcar dezvoltatorii aplicației nu le pot citi fără cheie.</string>
+    <string name="exif_cleaned_badge">EXIF &amp; GPS Eliminat</string>
+    <string name="exif_info_banner">Coordonatele GPS, data și modelul telefonului sunt șterse automat din fotografii pentru protejarea anonimatului.</string>
+    <string name="add_evidence_button">Adaugă Dovezi Criptate (PDF, Poze, Audio)</string>
+    <string name="encrypting_files">Se criptează fișierele pe dispozitiv...</string>
+    <string name="e2e_badge">AES-256 E2EE</string>
+    <string name="key_button">Cheie</string>
+    <string name="preview_button">Vizualizează</string>
+    <string name="delete_button">Șterge</string>
+    <string name="key_dialog_title">Cheie de Decriptare E2EE</string>
+    <string name="key_dialog_desc">Această cheie a fost generată exclusiv pe dispozitivul tău. Trimite această cheie doar destinatarei autorizate pentru decriptarea fișierului.</string>
+    <string name="copy_key">Copiază Cheia</string>
+    <string name="key_copied_toast">Cheia de decriptare a fost copiată în clipboard!</string>
+    <string name="preview_dialog_title">Previzualizare Fișier Decriptat</string>
+    <string name="decrypting_file">Se decriptează fișierul...</string>
+    <string name="decryption_error">Eroare la decriptarea fișierului.</string>
+    <string name="attached_evidence_count">%1$d dovezi criptate</string>
+    <string name="email_e2e_attached_header">DOVEZI CRIPTATE END-TO-END (AES-256-GCM):</string>
+    <string name="email_e2e_attached_item">- %1$s (%2$s) [ID: %3$s]</string>
+    <string name="email_e2e_note">Fișierele atașate au fost criptate local pe dispozitiv. Cheia de decriptare trebuie solicitată direct de la expeditor.</string>
+    <string name="view_evidence">Vezi Dovezi Criptate</string>
+    <string name="close">Închide</string>
+
+    <string name="track_report_title">Urmărire Sesizare Anonimă</string>
+    <string name="track_report_button">Urmărește Sesizare</string>
+    <string name="tracking_code_label">Cod Unic de Urmărire</string>
+    <string name="tracking_code_placeholder">Ex: CIVIC-8F3A-9K2L</string>
+    <string name="tracking_passcode_label">Parolă Secretă (6 cifre)</string>
+    <string name="tracking_passcode_placeholder">Ex: 849201</string>
+    <string name="verify_status_button">Verifică Status</string>
+    <string name="tracking_credentials_saved_title">Sesizare Salvată cu Succes!</string>
+    <string name="tracking_credentials_desc">Păstrează acest cod unic și parola secretă! Sunt singura cale prin care poți urmări statusul sau răspunde anonim la întrebări ulterioare.</string>
+    <string name="copy_credentials_button">Copiază Codul &amp; Parola</string>
+    <string name="credentials_copied_toast">Codul unic și parola au fost copiate în clipboard!</string>
+    <string name="status_pending">În Așteptare</string>
+    <string name="status_under_investigation">În Investigare</string>
+    <string name="status_resolved">Soluționat</string>
+    <string name="status_rejected">Respins</string>
+    <string name="invalid_tracking_credentials">Codul de urmărire sau parola secretă este incorectă.</string>
+    <string name="anonymous_communication_title">Comunicare &amp; Întrebări Anonime</string>
+    <string name="reply_placeholder">Scrie un răspuns anonim autorităților...</string>
+    <string name="send_reply_button">Trimite Răspuns</string>
+    <string name="role_reporter">Tu (Raportor Anonim)</string>
+    <string name="role_authority">Autoritate / Jurnalist</string>
+    <string name="no_messages_yet">Nu există mesaje de la autorități deocamdată.</string>
+    <string name="report_tracking_code_info">Cod: %1$s | Parolă: %2$s</string>
+
+    <string name="journalist_hub_title">Amplificatori &amp; Presă (NGO Hub)</string>
+    <string name="journalist_hub_subtitle">Jurnaliști de investigație și ONG-uri partenere pregătite să preia cazurile nerezolvate și să le aducă în atenția publică.</string>
+    <string name="official_complaint_title">Generator Plângeri Oficiale</string>
+    <string name="generate_complaint_button">Generează Plângere Oficială</string>
+    <string name="complaint_preview_title">Plângere Oficială (Draft)</string>
+    <string name="copy_complaint">Copiază Plângerea</string>
+    <string name="send_complaint_email">Trimite Plângerea Oficială</string>
+    <string name="complaint_copied_toast">Plângerea oficială a fost copiată în clipboard!</string>
+    <string name="ngo_funky_desc">Monitorizează cheltuirea banilor publici și promovează transparența instituțională.</string>
+    <string name="ngo_crj_desc">Apărarea drepturilor omului, asistență juridică și reformă în justiție.</string>
+    <string name="ngo_rise_desc">Investigații jurnalistice aprofundate privind rețelele de corupție și fraudă.</string>
+    <string name="ngo_ti_desc">Coaliție globală împotriva corupției și protecția avertizorilor de integritate.</string>
+    <string name="share_with_ngo">Transmite către amplificator</string>
+    <string name="transmit_to_press">Transmite către Presă / ONG</string>
+
+    <string name="legal_assistant_title">Asistent Virtual pentru Încadrare Juridică</string>
+    <string name="legal_assistant_subtitle">Verifică dacă fapta pe care vrei să o raportezi reprezintă corupție sau o problemă administrativă.</string>
+    <string name="question_1">Ce tip de situație dorești să raportezi?</string>
+    <string name="option_bribe">Funcționar public care cere mită sau foloase necuvenite</string>
+    <string name="option_procurement">Licitație publică suspectă sau deturnare de fonduri</string>
+    <string name="option_abuse">Abuz în serviciu, trafic de influență sau conflict de interese</string>
+    <string name="option_administrative">Problemă de infrastructură (ex: groapă în asfalt, gunoi, iluminat)</string>
+    <string name="result_corruption">Concluzie: Faptă de Corupție</string>
+    <string name="result_corruption_desc">Această situație se încadrează în legislația anticorupție (abuz în serviciu, luare de mită). Poți crea direct o sesizare criptată E2EE.</string>
+    <string name="result_admin">Concluzie: Problemă Administrativă (Non-Corupție)</string>
+    <string name="result_admin_desc">Aceasta este o problemă de administrare locală, nu o faptă de corupție. Sesizările de acest tip nu intră în competența DNA sau a parchetelor anticorupție.</string>
+    <string name="proceed_to_report">Creează Sesizare Anticorupție</string>
+    <string name="try_again">Verifică altă situație</string>
+    <string name="legal_assistant_button">Asistent Juridic</string>
+
+    <string name="security_settings_title">Setări Avansate de Securitate</string>
+    <string name="panic_mode_title">Mod Panică &amp; Disimulare (Calculator)</string>
+    <string name="panic_mode_desc">Ascunde aplicația sub un calculator complet funcțional în caz de urgență.</string>
+    <string name="backup_title">Backup Criptat al Sesizărilor</string>
+    <string name="backup_desc">Exportă o copie criptată a codurilor de urmărire și sesizărilor tale locale.</string>
+    <string name="export_backup_button">Exportă Backup Criptat</string>
+    <string name="backup_success_toast">Backup-ul criptat a fost salvat cu succes în stocarea externă!</string>
+
+    <string name="ai_assistant_title">Asistent Vocal AI pentru Corupție</string>
+    <string name="ai_assistant_subtitle">Înregistrează vocal cazul tău. AI va structura sesizarea și o va trimite la instituția competentă.</string>
+    <string name="ai_recording">Se înregistrează... Atinge pentru oprire</string>
+    <string name="ai_tap_to_record">Atinge pentru a începe înregistrarea vocală</string>
+    <string name="ai_transcription">Transcriere AI a Mărturiei</string>
+    <string name="ai_analysis_title">Analiză &amp; Încadrare AI</string>
+    <string name="ai_dispatch_button">Creează Sesizare &amp; Trimite la Instituție</string>
+    <string name="ai_assistant_button">Asistent Vocal AI</string>
+
+    <string name="quick_templates_title">Șabloane Rapide (Apasă pentru pre-completare)</string>
+    <string name="use_template">Folosește Șablon</string>
+
+    <string name="profile_settings_title">Profilul Meu Criptat</string>
+    <string name="profile_encrypted_info">Datele personale sunt salvate 100% local pe telefon, criptate cu AES-256. Nu se trimit la servere externe.</string>
+    <string name="profile_details_section">Date Personale de Identificare</string>
+    <string name="save_profile_button">Salvează Profilul Criptat</string>
+    <string name="clear_profile_button">Șterge Datele Salvate</string>
+    <string name="autofill_profile_button">Completează din Profil</string>
+    <string name="anonymous_mode_chip">🔒 Anonim (Ignoră profilul)</string>
+    <string name="official_mode_chip">👤 Oficial (Completează date)</string>
+
+    <string name="guide_title">Drepturile &amp; Ghidul Avertizorului UE</string>
+    <string name="guide_subtitle">Află ce drepturi legale ai conform Directivei UE 2019/1937 și cum să te protejezi în viața reală.</string>
+    <string name="rights_section_title">Drepturile Tale Legale (Directiva UE 2019/1937 &amp; Legea 361/2022)</string>
+    <string name="right_1_title">1. Protecție Absolută Împotriva Răzbunărilor</string>
+    <string name="right_1_desc">Sunt interzise prin lege concedierea, retrogradarea, hărțuirea sau orice altă formă de represalii la locul de muncă din cauza raportării.</string>
+    <string name="right_2_title">2. Canale Securizate de Raportare</string>
+    <string name="right_2_desc">Ai dreptul de a raporta intern în instituție, extern către autorități (DNA, ANI, DGA) sau public către presă și ONG-uri.</string>
+    <string name="right_3_title">3. Exonerare de Răspundere Legală</string>
+    <string name="right_3_desc">Nu poți fi acționat în instanță pentru încălcarea secretului profesional sau comercial când raportarea este făcută în interes public.</string>
+    <string name="right_4_title">4. Garantarea Confidențialității &amp; Anonimatului</string>
+    <string name="right_4_desc">Identitatea ta nu va fi dezvăluită fără consimțământul tău expres în nicio etapă a investigației.</string>
+    <string name="safety_section_title">Ghid de Siguranță &amp; Securitate în Viața Reală (OpSec)</string>
+    <string name="tip_1_title">Separat de Rețeaua și Dispozitivele de la Serviciu</string>
+    <string name="tip_1_desc">Nu folosi niciodată laptopul, telefonul, e-mailul de serviciu sau rețeaua Wi-Fi a companiei/instituției pentru a trimite o sesizare.</string>
+    <string name="tip_2_title">Criptare &amp; Eliminare Metadate</string>
+    <string name="tip_2_desc">Folosește funcțiile E2EE și eliminarea automată EXIF din aplicație pentru a preveni identificarea prin poze sau fișiere.</string>
+    <string name="tip_3_title">Nu Discuta cu Colegii despre Sesizare</string>
+    <string name="tip_3_desc">Păstrează discreția totală. Nu menționa nimănui din cadrul instituției că ai făcut o raportare.</string>
+    <string name="tip_4_title">Salvează Credențialele într-un Loc Securizat</string>
+    <string name="tip_4_desc">Păstrează codul unic și parola secretă într-un manager de parole sau notiță criptată.</string>
+    <string name="whistleblower_guide_button">Ghid Drepturi Avertizor</string>
+
+    <string name="sec_dialog_title">Inițializare Protocoale Securitate</string>
+    <string name="sec_step1_loading">Se scanează și se elimină metadatele (EXIF/GPS)...</string>
+    <string name="sec_step1_done">[Metadate eliminate cu succes]</string>
+    <string name="sec_step2_loading">Se criptează fișierele (AES-256-GCM)...</string>
+    <string name="sec_step2_done">[Pachet criptat și securizat local]</string>
+    <string name="sec_step3_loading">Se pregătește canalul securizat...</string>
+    <string name="sec_step3_done">[Conexiune securizată stabilită]</string>
+
+    <string name="onboarding_title">Promisiunea Noastră de Securitate</string>
+    <string name="onboarding_desc_1">Nici măcar noi, creatorii aplicației Civic, nu putem vedea cine ești dacă alegi să trimiți sesizarea anonim.</string>
+    <string name="onboarding_desc_2">Datele tale sunt criptate direct pe telefon înainte de a pleca. Fotografiile și documentele sunt curățate automat de locație (GPS) și alte metadate (EXIF).</string>
+    <string name="onboarding_button">Am înțeles, continuă</string>
+
+    <string name="email_pgp_seal">\n\n--- SECURE CIVIC EU SEAL ---\nAcest mesaj a fost generat și verificat de platforma securizată CivicEU. Integritatea datelor este garantată digital.\nAmprentă Digitală SHA-256: %1$s\n------------------------------</string>
+</resources>

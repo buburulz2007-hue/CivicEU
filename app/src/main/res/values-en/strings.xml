@@ -1,0 +1,208 @@
+<resources>
+    <string name="app_name">Civic</string>
+    <string name="home_slogan">Get involved for a cleaner community</string>
+    <string name="new_report">New Report</string>
+    <string name="search_placeholder">Search reports…</string>
+    <string name="recent_reports">Recent Reports</string>
+    <string name="no_reports_title">No reports yet</string>
+    <string name="no_reports_desc">Be the first to take action! Your reports help fight corruption.</string>
+    <string name="sent_by">Sent by: %1$s</string>
+    <string name="phone_short">Tel: %1$s</string>
+
+    <string name="incident_details">Incident Details</string>
+    <string name="title_label">What happened?</string>
+    <string name="title_placeholder">Ex: Bribe at the central hospital</string>
+    <string name="category_label">Category</string>
+    <string name="category_placeholder">Ex: Health, Education, Administration</string>
+    <string name="description_label">Detailed description</string>
+    <string name="description_placeholder">Tell what happened, who was involved…</string>
+
+    <string name="who_are_you">Who are you?</string>
+    <string name="warning_anonymous">Warning: Anonymous reports are often ignored by authorities.</string>
+    <string name="name_label">First and Last Name (Optional)</string>
+    <string name="name_placeholder">John Doe</string>
+    <string name="address_label">Address (Optional)</string>
+    <string name="address_placeholder">Liberty St, No. 1, London</string>
+    <string name="phone_label">Phone Number (Optional)</string>
+    <string name="phone_placeholder">+1 xxx xxx xxx</string>
+
+    <string name="save_locally">Save in app</string>
+    <string name="send_to_agency">Send to %1$s</string>
+    <string name="select_agency">Select Agency</string>
+    <string name="target_agency">Target Agency</string>
+
+    <string name="email_salutation">DEAR CHIEF PROSECUTOR,</string>
+    <string name="email_intro">The undersigned, %1$s, residing at %2$s, with phone number: %3$s, I am bringing to your attention the following corruption report:</string>
+    <string name="email_report_title">TITLE: %1$s</string>
+    <string name="email_report_category">CATEGORY: %1$s</string>
+    <string name="email_report_desc">DESCRIPTION OF FACTS:</string>
+    <string name="email_footer">This report was generated via the Civic app.</string>
+    <string name="email_date">Date: %1$s</string>
+    <string name="email_subject">CORRUPTION REPORT: %1$s</string>
+    <string name="unspecified">[UNSPECIFIED]</string>
+    <string name="back">Back</string>
+    <string name="change_language">Change Language</string>
+    <string name="language_ro">Romanian</string>
+    <string name="language_en">English</string>
+    <string name="language_fr">French</string>
+    <string name="language_de">German</string>
+    <string name="language_es">Spanish</string>
+    <string name="language_it">Italian</string>
+    <string name="debug_logs">Debug Logs</string>
+    <string name="clear_logs">Clear Logs</string>
+    <string name="no_logs">No logs saved.</string>
+    <string name="terms_title">Terms and Conditions</string>
+    <string name="terms_accept">I agree to the Terms and Conditions</string>
+    <string name="terms_error">You must accept the terms to proceed.</string>
+    <string name="terms_content">
+        1. This app (Civic) is a tool to facilitate reports to anti-corruption authorities.\n\n
+        2. The user is solely responsible for the truthfulness of the information provided.\n\n
+        3. The app does not store data on external servers. Reports are saved locally or sent via the user\'s personal email.\n\n
+        4. Submitting false information may lead to legal liability under current legislation.\n\n
+        5. By using the "Send to Agency" button, you agree that the entered data will be included in the sent email.
+    </string>
+
+    <string name="e2e_evidence_title">End-to-End Encrypted Evidence</string>
+    <string name="e2e_evidence_info">All files (PDFs, photos, audio recordings) are encrypted with AES-256-GCM directly on your device before saving or sending. Not even app developers can read them without the key.</string>
+    <string name="exif_cleaned_badge">EXIF &amp; GPS Stripped</string>
+    <string name="exif_info_banner">GPS coordinates, timestamp, and device model in photos are automatically stripped to protect your anonymity.</string>
+    <string name="add_evidence_button">Add Encrypted Evidence (PDF, Photos, Audio)</string>
+    <string name="encrypting_files">Encrypting files on device...</string>
+    <string name="e2e_badge">AES-256 E2EE</string>
+    <string name="key_button">Key</string>
+    <string name="preview_button">Preview</string>
+    <string name="delete_button">Delete</string>
+    <string name="key_dialog_title">E2EE Decryption Key</string>
+    <string name="key_dialog_desc">This key was generated exclusively on your device. Only send this key to the recipient authorized to decrypt the file.</string>
+    <string name="copy_key">Copy Key</string>
+    <string name="key_copied_toast">Decryption key copied to clipboard!</string>
+    <string name="preview_dialog_title">Decrypted File Preview</string>
+    <string name="decrypting_file">Decrypting file...</string>
+    <string name="decryption_error">Error decrypting file.</string>
+    <string name="attached_evidence_count">%1$d encrypted files</string>
+    <string name="email_e2e_attached_header">END-TO-END ENCRYPTED EVIDENCE (AES-256-GCM):</string>
+    <string name="email_e2e_attached_item">- %1$s (%2$s) [ID: %3$s]</string>
+    <string name="email_e2e_note">Attached files were encrypted locally on the device. Decryption key must be requested directly from the sender.</string>
+    <string name="view_evidence">View Encrypted Evidence</string>
+    <string name="close">Close</string>
+
+    <string name="track_report_title">Track Anonymous Report</string>
+    <string name="track_report_button">Track Report</string>
+    <string name="tracking_code_label">Unique Tracking Code</string>
+    <string name="tracking_code_placeholder">Ex: CIVIC-8F3A-9K2L</string>
+    <string name="tracking_passcode_label">Secret Passcode (6 digits)</string>
+    <string name="tracking_passcode_placeholder">Ex: 849201</string>
+    <string name="verify_status_button">Check Status</string>
+    <string name="tracking_credentials_saved_title">Report Saved Successfully!</string>
+    <string name="tracking_credentials_desc">Keep this unique code and secret passcode safe! They are the only way you can track your status or answer follow-up questions anonymously.</string>
+    <string name="copy_credentials_button">Copy Code &amp; Passcode</string>
+    <string name="credentials_copied_toast">Tracking code and passcode copied to clipboard!</string>
+    <string name="status_pending">Pending</string>
+    <string name="status_under_investigation">Under Investigation</string>
+    <string name="status_resolved">Resolved</string>
+    <string name="status_rejected">Rejected</string>
+    <string name="invalid_tracking_credentials">Invalid tracking code or passcode.</string>
+    <string name="anonymous_communication_title">Anonymous Communication &amp; Q&amp;A</string>
+    <string name="reply_placeholder">Write an anonymous reply to authorities...</string>
+    <string name="send_reply_button">Send Reply</string>
+    <string name="role_reporter">You (Anonymous Reporter)</string>
+    <string name="role_authority">Authority / Journalist</string>
+    <string name="no_messages_yet">No messages from authorities yet.</string>
+    <string name="report_tracking_code_info">Code: %1$s | Passcode: %2$s</string>
+
+    <string name="journalist_hub_title">Amplifiers &amp; Press (NGO Hub)</string>
+    <string name="journalist_hub_subtitle">Investigative journalists and partner NGOs ready to take on unresolved cases and bring them to public attention.</string>
+    <string name="official_complaint_title">Official Complaint Generator</string>
+    <string name="generate_complaint_button">Generate Official Complaint</string>
+    <string name="complaint_preview_title">Official Complaint (Draft)</string>
+    <string name="copy_complaint">Copy Complaint</string>
+    <string name="send_complaint_email">Send Official Complaint</string>
+    <string name="complaint_copied_toast">Official complaint copied to clipboard!</string>
+    <string name="ngo_funky_desc">Monitors public spending and promotes institutional transparency.</string>
+    <string name="ngo_crj_desc">Human rights defense, legal aid, and justice reform.</string>
+    <string name="ngo_rise_desc">In-depth investigative journalism into corruption and fraud networks.</string>
+    <string name="ngo_ti_desc">Global coalition against corruption and whistleblower protection.</string>
+    <string name="share_with_ngo">Send to Amplifier</string>
+    <string name="transmit_to_press">Send to Press / NGO</string>
+
+    <string name="legal_assistant_title">Virtual Legal Classification Assistant</string>
+    <string name="legal_assistant_subtitle">Check if the act you want to report is corruption or an administrative issue.</string>
+    <string name="question_1">What type of situation do you want to report?</string>
+    <string name="option_bribe">Public official demanding bribes or undue benefits</string>
+    <string name="option_procurement">Suspicious public procurement or embezzlement</string>
+    <string name="option_abuse">Abuse of office, influence peddling or conflict of interest</string>
+    <string name="option_administrative">Infrastructure problem (e.g. pothole, garbage, street lighting)</string>
+    <string name="result_corruption">Conclusion: Act of Corruption</string>
+    <string name="result_corruption_desc">This situation falls under anti-corruption legislation. You can directly create an E2EE encrypted report.</string>
+    <string name="result_admin">Conclusion: Administrative Issue (Non-Corruption)</string>
+    <string name="result_admin_desc">This is a local administration issue, not corruption. Such reports do not fall under the competence of anti-corruption prosecutors.</string>
+    <string name="proceed_to_report">Create Anti-Corruption Report</string>
+    <string name="try_again">Check another situation</string>
+    <string name="legal_assistant_button">Legal Assistant</string>
+
+    <string name="security_settings_title">Advanced Security Settings</string>
+    <string name="panic_mode_title">Panic Mode &amp; Decoy (Calculator)</string>
+    <string name="panic_mode_desc">Hide the app under a fully functional calculator in case of emergency.</string>
+    <string name="backup_title">Encrypted Report Backup</string>
+    <string name="backup_desc">Export an encrypted copy of your local tracking codes and reports.</string>
+    <string name="export_backup_button">Export Encrypted Backup</string>
+    <string name="backup_success_toast">Encrypted backup successfully saved to external storage!</string>
+
+    <string name="ai_assistant_title">AI Voice Assistant for Corruption</string>
+    <string name="ai_assistant_subtitle">Record your testimony. AI will structure the report and dispatch it to the competent institution.</string>
+    <string name="ai_recording">Recording... Tap again to stop</string>
+    <string name="ai_tap_to_record">Tap to start voice recording</string>
+    <string name="ai_transcription">AI Testimony Transcription</string>
+    <string name="ai_analysis_title">AI Analysis &amp; Classification</string>
+    <string name="ai_dispatch_button">Create Report &amp; Send to Institution</string>
+    <string name="ai_assistant_button">AI Voice Assistant</string>
+
+    <string name="quick_templates_title">Quick Templates (Tap to pre-fill)</string>
+    <string name="use_template">Use Template</string>
+
+    <string name="profile_settings_title">My Encrypted Profile</string>
+    <string name="profile_encrypted_info">Personal data is saved 100% locally on phone with AES-256 encryption. Never sent to external servers.</string>
+    <string name="profile_details_section">Personal Identity Details</string>
+    <string name="save_profile_button">Save Encrypted Profile</string>
+    <string name="clear_profile_button">Clear Saved Data</string>
+    <string name="autofill_profile_button">Fill from Profile</string>
+    <string name="anonymous_mode_chip">🔒 Anonymous (Ignore Profile)</string>
+    <string name="official_mode_chip">👤 Official (Use Profile Data)</string>
+
+    <string name="guide_title">EU Whistleblower Rights &amp; Guide</string>
+    <string name="guide_subtitle">Learn your legal rights under EU Directive 2019/1937 and how to stay safe in real life.</string>
+    <string name="rights_section_title">Your Legal Rights (EU Directive 2019/1937)</string>
+    <string name="right_1_title">1. Absolute Protection Against Retaliation</string>
+    <string name="right_1_desc">Dismissal, demotion, harassment, or financial penalties at work due to reporting are strictly prohibited by law.</string>
+    <string name="right_2_title">2. Secure Reporting Channels</string>
+    <string name="right_2_desc">You have the right to report internally, externally to authorities, or publicly to press and NGOs.</string>
+    <string name="right_3_title">3. Legal Exemption from Liability</string>
+    <string name="right_3_desc">You cannot be sued for breaching professional or trade secrecy when reporting in the public interest.</string>
+    <string name="right_4_title">4. Guaranteed Confidentiality &amp; Anonymity</string>
+    <string name="right_4_desc">Your identity will never be disclosed without your explicit consent at any stage of the investigation.</string>
+    <string name="safety_section_title">Real-Life Safety &amp; Security Guide (OpSec)</string>
+    <string name="tip_1_title">Separate Work Network and Devices</string>
+    <string name="tip_1_desc">Never use your work laptop, work phone, company email, or office Wi-Fi to submit a report.</string>
+    <string name="tip_2_title">Encryption &amp; Metadata Removal</string>
+    <string name="tip_2_desc">Use in-app E2EE features and automatic EXIF removal to prevent identification through photos or files.</string>
+    <string name="tip_3_title">Do Not Discuss Reports with Colleagues</string>
+    <string name="tip_3_desc">Maintain complete discretion. Do not mention to anyone at work that you submitted a report.</string>
+    <string name="tip_4_title">Keep Credentials in a Secure Place</string>
+    <string name="tip_4_desc">Store your unique tracking code and secret passcode in a password manager or encrypted note.</string>
+    <string name="whistleblower_guide_button">Whistleblower Rights Guide</string>
+
+    <string name="sec_dialog_title">Security Protocols Initialization</string>
+    <string name="sec_step1_loading">Scanning and stripping metadata (EXIF/GPS)...</string>
+    <string name="sec_step1_done">[Metadata successfully stripped]</string>
+    <string name="sec_step2_loading">Encrypting files (AES-256-GCM)...</string>
+    <string name="sec_step2_done">[Payload encrypted and secured locally]</string>
+    <string name="sec_step3_loading">Preparing secure connection channel...</string>
+    <string name="sec_step3_done">[Secure channel established]</string>
+
+    <string name="onboarding_title">Our Security Promise</string>
+    <string name="onboarding_desc_1">Not even we, the creators of the Civic app, can see who you are if you choose to send your report anonymously.</string>
+    <string name="onboarding_desc_2">Your data is encrypted directly on your phone before it leaves. Photos and documents are automatically stripped of location (GPS) and other metadata (EXIF).</string>
+    <string name="onboarding_button">I understand, continue</string>
+
+    <string name="email_pgp_seal">\n\n--- SECURE CIVIC EU SEAL ---\nThis message was generated and verified by the secure CivicEU platform. Data integrity is digitally guaranteed.\nSHA-256 Digital Fingerprint: %1$s\n------------------------------</string>
+</resources>
