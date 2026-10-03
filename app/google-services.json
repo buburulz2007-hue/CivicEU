@@ -1,0 +1,38 @@
+{
+  "project_info": {
+    "project_number": "1234567890",
+    "project_id": "civiceu-dummy-id",
+    "storage_bucket": "civiceu-dummy-id.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1234567890:android:abcdef1234567890",
+        "android_client_info": {
+          "package_name": "com.civiceu.com"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1234567890-abcdef.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.civiceu.com",
+            "certificate_hash": "DA7E64F28A7C7785FF40E09415C0318F49601E23"
+          }
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDUMMYKEYFORFIREBASEAPI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
