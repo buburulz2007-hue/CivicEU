@@ -130,4 +130,55 @@
     <string name="onboarding_button">Entendido, empezar</string>
 
     <string name="email_pgp_seal">\n\n--- SECURE CIVIC EU SEAL ---\nEste mensaje fue generado y verificado por la plataforma segura CivicEU. La integridad de los datos está garantizada digitalmente.\nHuella Digital SHA-256: %1$s\n------------------------------</string>
+
+    <string name="impact_title">Impacto y Transparencia</string>
+    <string name="impact_button">Impacto y Stats</string>
+    <string name="global_stats_title">Indicadores Globales</string>
+    <string name="total_reports_ue">Denuncias enviadas (UE)</string>
+    <string name="anonymous_reports">Anónimo</string>
+    <string name="assumed_reports">Oficial</string>
+    <string name="avg_time">Tiempo medio de transmisión</string>
+    <string name="avg_time_val">&lt; 2 minutos</string>
+    <string name="map_section_title">Distribución Europea</string>
+    <string name="map_section_desc">Por seguridad, solo mostramos el total por país.</string>
+    <string name="institutions_section_title">Monitoreo de Instituciones</string>
+    <string name="inst_col_name">Institución</string>
+    <string name="inst_col_sent">Enviado</string>
+    <string name="inst_col_ack">Confirmado</string>
+    <string name="inst_col_status">Estado</string>
+
+    <string name="premium_button">Protección Legal PRO</string>
+    <string name="premium_title">Escudo Premium</string>
+    <string name="premium_desc_1">Como alertador, tu seguridad es lo primero. Pásate a PRO para un análisis de riesgos legales antes de denunciar.</string>
+    <string name="premium_feature_1">Auditoría legal por abogados asociados</string>
+    <string name="premium_feature_2">Análisis avanzado de huella digital</string>
+    <string name="premium_feature_3">Enrutamiento prioritario a redes de ONG</string>
+    <string name="premium_feature_4">Borrado de emergencia (Wipe) en caso de peligro</string>
+    <string name="premium_feature_5">Ofuscación de voz (Antirreconocimiento de audio)</string>
+    <string name="premium_feature_6">Modo Zero-Trace (Borrar copia local después de enviar)</string>
+    <string name="premium_feature_7">Dead Man\'s Switch (Borrado automático por inactividad)</string>
+    <string name="pro_voice_obfuscation">Aplicar filtro de anonimización de voz (Pitch Shifting)</string>
+    <string name="pro_burn_after_send">Destruir copia local inmediatamente después de enviar (Zero-Trace)</string>
+    <string name="premium_upgrade_button">Activar Protección PRO (Gratis)</string>
+    <string name="premium_coming_soon">Conectando a la red de seguridad PRO...\nEl servicio le será asignado pronto por una ONG asociada.</string>
+    <string name="privacy_policy_title">Privacidad y Términos</string>
+    <string name="rate_app_button">Calificar App (Google Play)</string>
+    <string name="theme_settings_title">Apariencia / Tema</string>
+    <string name="theme_system">Sistema</string>
+    <string name="theme_light">Modo Claro</string>
+    <string name="theme_dark">Modo Oscuro</string>
+
+    <string name="security_setup_title">Contraseña (Señuelo)</string>
+    <string name="security_setup_btn">Activar PIN y Señuelo</string>
+    <string name="security_remove_btn">Desactivar Seguridad</string>
+    <string name="pin_real_placeholder">PIN Real (min 4)</string>
+    <string name="pin_decoy_placeholder">PIN Señuelo (Borra datos)</string>
+    <string name="pin_save">Guardar</string>
+
+    <string name="tooltip_evidence_title">Pruebas y Limpieza EXIF</string>
+    <string name="tooltip_evidence_desc">A todos los archivos adjuntos se les eliminan automáticamente los metadatos (incluido GPS) y se cifran localmente con AES-256 antes de la transmisión.</string>
+    <string name="tooltip_profile_title">Anónimo vs. Oficial</string>
+    <string name="tooltip_profile_desc">Anónimo: Tu identidad permanece secreta.\nOficial: Tus datos de perfil se incluyen para que las autoridades puedan contactarte.</string>
+    <string name="tooltip_tracking_title">Código de Seguimiento (Q&amp;A)</string>
+    <string name="tooltip_tracking_desc">El sistema genera un código único. Si las autoridades tienen preguntas, puedes responder de forma anónima usando este código.</string>
 </resources>

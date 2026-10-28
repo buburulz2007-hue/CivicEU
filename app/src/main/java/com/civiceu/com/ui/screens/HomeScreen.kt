@@ -19,10 +19,15 @@ import androidx.compose.material.icons.filled.Mic
 import androidx.compose.material.icons.filled.Person
 import androidx.compose.material.icons.filled.Search
 import androidx.compose.material.icons.filled.Security
+import androidx.compose.material.icons.filled.BarChart
+import androidx.compose.material.icons.filled.Diamond
+import androidx.compose.material.icons.filled.Warning
+import androidx.compose.material.icons.automirrored.filled.MenuBook
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
@@ -48,7 +53,9 @@ fun HomeScreen(
     onLegalAssistantClick: () -> Unit,
     onAiAssistantClick: () -> Unit,
     onUserProfileClick: () -> Unit,
-    onWhistleblowerGuideClick: () -> Unit
+    onWhistleblowerGuideClick: () -> Unit,
+    onImpactClick: () -> Unit,
+    onPremiumClick: () -> Unit
 ) {
     val reports by ReportRepository.reports.collectAsState()
     var showLanguageMenu by remember { mutableStateOf(false) }
@@ -91,6 +98,20 @@ fun HomeScreen(
                     }
                 },
                 actions = {
+                    val isPro = com.civiceu.com.util.PremiumManager.isPremium(LocalContext.current)
+                    val context = LocalContext.current
+                    if (isPro) {
+                        IconButton(onClick = {
+                            com.civiceu.com.crypto.SecurityManager.executePanicWipe(context)
+                            android.widget.Toast.makeText(context, "PANIC WIPE EXECUTAT!", android.widget.Toast.LENGTH_LONG).show()
+                            (context as? android.app.Activity)?.finishAffinity()
+                        }) {
+                            Icon(Icons.Default.Warning, contentDescription = "Panic Wipe", tint = androidx.compose.ui.graphics.Color.Red)
+                        }
+                    }
+                    IconButton(onClick = onPremiumClick) {
+                        Icon(Icons.Default.Diamond, contentDescription = "Premium", tint = androidx.compose.ui.graphics.Color(0xFFFFD700))
+                    }
                     IconButton(onClick = onUserProfileClick) {
                         Icon(Icons.Default.Person, contentDescription = stringResource(R.string.profile_settings_title))
                     }
@@ -159,68 +180,69 @@ fun HomeScreen(
             ) {
                 Row(
                     modifier = Modifier.fillMaxWidth(),
-                    horizontalArrangement = Arrangement.spacedBy(8.dp)
+                    horizontalArrangement = Arrangement.spacedBy(12.dp)
                 ) {
-                    OutlinedButton(
+                    ElevatedMenuCard(
                         onClick = onTrackReportClick,
-                        modifier = Modifier.weight(1f).height(48.dp),
-                        shape = RoundedCornerShape(16.dp)
-                    ) {
-                        Icon(Icons.Default.Search, contentDescription = null, modifier = Modifier.size(16.dp))
-                        Spacer(Modifier.width(4.dp))
-                        Text(stringResource(R.string.track_report_button), fontSize = 10.sp)
-                    }
+                        icon = Icons.Default.Search,
+                        title = stringResource(R.string.track_report_button),
+                        color = MaterialTheme.colorScheme.primary,
+                        modifier = Modifier.weight(1f)
+                    )
 
-                    OutlinedButton(
+                    ElevatedMenuCard(
                         onClick = onJournalistHubClick,
-                        modifier = Modifier.weight(1f).height(48.dp),
-                        shape = RoundedCornerShape(16.dp),
-                        colors = ButtonDefaults.outlinedButtonColors(contentColor = MaterialTheme.colorScheme.secondary)
-                    ) {
-                        Icon(Icons.Default.Security, contentDescription = null, modifier = Modifier.size(16.dp))
-                        Spacer(Modifier.width(4.dp))
-                        Text(stringResource(R.string.transmit_to_press), fontSize = 10.sp)
-                    }
+                        icon = Icons.Default.Security,
+                        title = stringResource(R.string.transmit_to_press),
+                        color = MaterialTheme.colorScheme.secondary,
+                        modifier = Modifier.weight(1f)
+                    )
                 }
 
                 Row(
                     modifier = Modifier.fillMaxWidth(),
-                    horizontalArrangement = Arrangement.spacedBy(8.dp)
+                    horizontalArrangement = Arrangement.spacedBy(12.dp)
                 ) {
-                    OutlinedButton(
+                    ElevatedMenuCard(
                         onClick = onLegalAssistantClick,
-                        modifier = Modifier.weight(1f).height(48.dp),
-                        shape = RoundedCornerShape(16.dp),
-                        colors = ButtonDefaults.outlinedButtonColors(contentColor = MaterialTheme.colorScheme.tertiary)
-                    ) {
-                        Icon(Icons.AutoMirrored.Filled.HelpOutline, contentDescription = null, modifier = Modifier.size(16.dp))
-                        Spacer(Modifier.width(4.dp))
-                        Text(stringResource(R.string.legal_assistant_button), fontSize = 10.sp)
-                    }
+                        icon = Icons.AutoMirrored.Filled.HelpOutline,
+                        title = stringResource(R.string.legal_assistant_button),
+                        color = MaterialTheme.colorScheme.tertiary,
+                        modifier = Modifier.weight(1f)
+                    )
 
-                    OutlinedButton(
+                    ElevatedMenuCard(
                         onClick = onAiAssistantClick,
-                        modifier = Modifier.weight(1f).height(48.dp),
-                        shape = RoundedCornerShape(16.dp),
-                        colors = ButtonDefaults.outlinedButtonColors(contentColor = MaterialTheme.colorScheme.primary)
-                    ) {
-                        Icon(Icons.Default.Mic, contentDescription = null, modifier = Modifier.size(16.dp))
-                        Spacer(Modifier.width(4.dp))
-                        Text(stringResource(R.string.ai_assistant_button), fontSize = 10.sp)
-                    }
+                        icon = Icons.Default.Mic,
+                        title = stringResource(R.string.ai_assistant_button),
+                        color = MaterialTheme.colorScheme.error, // Folosim rosu pt AI pentru a ieși în evidență
+                        modifier = Modifier.weight(1f)
+                    )
                 }
 
-                OutlinedButton(
-                    onClick = onWhistleblowerGuideClick,
-                    modifier = Modifier.fillMaxWidth().height(48.dp),
-                    shape = RoundedCornerShape(16.dp),
-                    colors = ButtonDefaults.outlinedButtonColors(contentColor = MaterialTheme.colorScheme.onSurfaceVariant)
+                Row(
+                    modifier = Modifier.fillMaxWidth(),
+                    horizontalArrangement = Arrangement.spacedBy(12.dp)
                 ) {
-                    Icon(Icons.AutoMirrored.Filled.MenuBook, contentDescription = null, modifier = Modifier.size(18.dp))
-                    Spacer(Modifier.width(6.dp))
-                    Text(stringResource(R.string.whistleblower_guide_button), fontSize = 12.sp)
+                    ElevatedMenuCard(
+                        onClick = onWhistleblowerGuideClick,
+                        icon = Icons.AutoMirrored.Filled.MenuBook,
+                        title = stringResource(R.string.whistleblower_guide_button),
+                        color = MaterialTheme.colorScheme.onSurfaceVariant,
+                        modifier = Modifier.weight(1f)
+                    )
+                    
+                    ElevatedMenuCard(
+                        onClick = onImpactClick,
+                        icon = Icons.Default.BarChart,
+                        title = stringResource(R.string.impact_button),
+                        color = MaterialTheme.colorScheme.onSurfaceVariant,
+                        modifier = Modifier.weight(1f)
+                    )
                 }
             }
+            // Add a spacer or remaining UI if needed
+            val reports by ReportRepository.reports.collectAsState()
 
             if (reports.isEmpty()) {
                 EmptyState()
@@ -465,6 +487,50 @@ fun ReportItem(report: CorruptionReport) {
                     color = MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.7f)
                 )
             }
+        }
+    }
+}
+
+@Composable
+fun ElevatedMenuCard(
+    onClick: () -> Unit,
+    icon: androidx.compose.ui.graphics.vector.ImageVector,
+    title: String,
+    color: Color,
+    modifier: Modifier = Modifier
+) {
+    ElevatedCard(
+        onClick = onClick,
+        modifier = modifier.height(95.dp),
+        shape = RoundedCornerShape(20.dp),
+        colors = CardDefaults.elevatedCardColors(
+            containerColor = color.copy(alpha = 0.12f)
+        ),
+        elevation = CardDefaults.elevatedCardElevation(defaultElevation = 2.dp)
+    ) {
+        Column(
+            modifier = Modifier
+                .fillMaxSize()
+                .padding(12.dp),
+            verticalArrangement = Arrangement.Center,
+            horizontalAlignment = Alignment.CenterHorizontally
+        ) {
+            Icon(
+                imageVector = icon,
+                contentDescription = null,
+                tint = color,
+                modifier = Modifier.size(28.dp)
+            )
+            Spacer(modifier = Modifier.height(6.dp))
+            Text(
+                text = title,
+                style = MaterialTheme.typography.bodySmall,
+                fontWeight = FontWeight.Bold,
+                color = MaterialTheme.colorScheme.onSurface,
+                textAlign = TextAlign.Center,
+                maxLines = 2,
+                overflow = TextOverflow.Ellipsis
+            )
         }
     }
 }

@@ -130,4 +130,55 @@
     <string name="onboarding_button">Verstanden, starten</string>
 
     <string name="email_pgp_seal">\n\n--- SECURE CIVIC EU SEAL ---\nDiese Nachricht wurde von der sicheren CivicEU-Plattform generiert und verifiziert. Die Datenintegrität ist digital garantiert.\nSHA-256 Digitaler Fingerabdruck: %1$s\n------------------------------</string>
+
+    <string name="impact_title">Auswirkungen &amp; Transparenz</string>
+    <string name="impact_button">Auswirkungen &amp; Statistik</string>
+    <string name="global_stats_title">Globale Indikatoren</string>
+    <string name="total_reports_ue">Gesendete Meldungen (EU)</string>
+    <string name="anonymous_reports">Anonym</string>
+    <string name="assumed_reports">Offiziell</string>
+    <string name="avg_time">Durchschnittliche Sendezeit</string>
+    <string name="avg_time_val">&lt; 2 Minuten</string>
+    <string name="map_section_title">Europäische Verteilung</string>
+    <string name="map_section_desc">Aus Sicherheitsgründen zeigen wir nur Ländertotale.</string>
+    <string name="institutions_section_title">Institutionen überwachen</string>
+    <string name="inst_col_name">Institution</string>
+    <string name="inst_col_sent">Gesendet</string>
+    <string name="inst_col_ack">Bestätigt</string>
+    <string name="inst_col_status">Status</string>
+
+    <string name="premium_button">Rechtsschutz PRO</string>
+    <string name="premium_title">Premium-Schutz</string>
+    <string name="premium_desc_1">Als Hinweisgeber steht Ihre Sicherheit an erster Stelle. Wechseln Sie zu PRO für eine direkte Rechtsberatung vor der Meldung.</string>
+    <string name="premium_feature_1">Rechtliches Audit durch Partneranwälte</string>
+    <string name="premium_feature_2">Erweiterte Analyse des digitalen Fußabdrucks</string>
+    <string name="premium_feature_3">Priorisierte Weiterleitung an investigative NGOs</string>
+    <string name="premium_feature_4">Militärische Notlöschung (Wipe) bei Gefahr</string>
+    <string name="premium_feature_5">Sprachverschleierung (Audio-Anti-Erkennung)</string>
+    <string name="premium_feature_6">Zero-Trace-Modus (Lokale Kopie nach dem Senden löschen)</string>
+    <string name="premium_feature_7">Dead Man\'s Switch (Automatisches Löschen bei Inaktivität)</string>
+    <string name="pro_voice_obfuscation">Sprachanonymisierungsfilter anwenden (Pitch Shifting)</string>
+    <string name="pro_burn_after_send">Lokale Kopie sofort nach dem Senden zerstören (Zero-Trace)</string>
+    <string name="premium_upgrade_button">PRO-Schutz aktivieren (Kostenlos)</string>
+    <string name="premium_coming_soon">Verbindung zum PRO-Sicherheitsnetzwerk...\nDer Service wird Ihnen in Kürze von einer Partner-NGO zugewiesen.</string>
+    <string name="privacy_policy_title">Datenschutz &amp; Bedingungen</string>
+    <string name="rate_app_button">App bewerten (Google Play)</string>
+    <string name="theme_settings_title">Erscheinungsbild</string>
+    <string name="theme_system">Systemeinstellung</string>
+    <string name="theme_light">Hell</string>
+    <string name="theme_dark">Dunkel</string>
+
+    <string name="security_setup_title">Passwort (Tarnung)</string>
+    <string name="security_setup_btn">PIN &amp; Tarnung aktivieren</string>
+    <string name="security_remove_btn">Sicherheit deaktivieren</string>
+    <string name="pin_real_placeholder">Echte PIN (min. 4)</string>
+    <string name="pin_decoy_placeholder">Tarn-PIN (Löscht alles)</string>
+    <string name="pin_save">Speichern</string>
+
+    <string name="tooltip_evidence_title">Beweise &amp; EXIF-Bereinigung</string>
+    <string name="tooltip_evidence_desc">Alle angehängten Dateien werden automatisch von Metadaten (inkl. GPS) befreit und vor der Übertragung lokal mit AES-256 verschlüsselt.</string>
+    <string name="tooltip_profile_title">Anonym vs. Offiziell</string>
+    <string name="tooltip_profile_desc">Anonym: Ihre Identität bleibt streng geheim.\nOffiziell: Ihre Profildaten werden in die Meldung aufgenommen, damit die Behörden Sie kontaktieren können.</string>
+    <string name="tooltip_tracking_title">Q&amp;A Tracking-Code</string>
+    <string name="tooltip_tracking_desc">Das System generiert einen eindeutigen Code. Wenn Behörden Rückfragen haben, können Sie diese anonym beantworten.</string>
 </resources>

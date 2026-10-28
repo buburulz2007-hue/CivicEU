@@ -21,7 +21,7 @@ import com.civiceu.com.R
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun WhistleblowerGuideScreen(onBack: () -> Unit) {
+fun WhistleblowerGuideScreen(onBack: () -> Unit, onNavigateToLegal: () -> Unit) {
     Scaffold(
         topBar = {
             CenterAlignedTopAppBar(
@@ -122,6 +122,20 @@ fun WhistleblowerGuideScreen(onBack: () -> Unit) {
                     )
                 }
             }
+
+            Spacer(modifier = Modifier.height(16.dp))
+
+            OutlinedButton(
+                onClick = onNavigateToLegal,
+                modifier = Modifier.fillMaxWidth().height(50.dp),
+                shape = RoundedCornerShape(16.dp)
+            ) {
+                Icon(Icons.Default.Security, contentDescription = null, modifier = Modifier.size(18.dp))
+                Spacer(modifier = Modifier.width(8.dp))
+                Text(stringResource(R.string.privacy_policy_title))
+            }
+
+            Spacer(modifier = Modifier.height(24.dp))
         }
     }
 }

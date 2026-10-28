@@ -205,4 +205,59 @@
     <string name="onboarding_button">Am înțeles, continuă</string>
 
     <string name="email_pgp_seal">\n\n--- SECURE CIVIC EU SEAL ---\nAcest mesaj a fost generat și verificat de platforma securizată CivicEU. Integritatea datelor este garantată digital.\nAmprentă Digitală SHA-256: %1$s\n------------------------------</string>
+
+    <string name="impact_title">Impact și Transparență</string>
+    <string name="impact_button">Impact &amp; Statistici</string>
+    <string name="global_stats_title">Indicatori Globali de Impact</string>
+    <string name="total_reports_ue">Total sesizări transmise (UE)</string>
+    <string name="anonymous_reports">Anonime</string>
+    <string name="assumed_reports">Asumate</string>
+    <string name="avg_time">Timp mediu de transmitere</string>
+    <string name="avg_time_val">&lt; 2 minute</string>
+    <string name="map_section_title">Distribuția Europeană</string>
+    <string name="map_section_desc">Din motive de securitate (OpSec), afișăm exclusiv totalul la nivel de țară. Locațiile precise nu sunt înregistrate.</string>
+    <string name="institutions_section_title">Monitorizarea Instituțiilor</string>
+    <string name="inst_col_name">Instituție</string>
+    <string name="inst_col_sent">Trimise</string>
+    <string name="inst_col_ack">Confirmate</string>
+    <string name="inst_col_status">Stadiu Mediu</string>
+
+    <string name="premium_button">Asistență Juridică PRO</string>
+    <string name="premium_title">Protecție Legală Premium</string>
+    <string name="premium_desc_1">În calitate de Avertizor de Integritate, siguranța ta este pe primul loc. Treci la versiunea PRO pentru a beneficia de consultanță directă și analiză a riscurilor legale.</string>
+    <string name="premium_feature_1">Audit Legal Pre-Trimitere (Avocați Parteneri)</string>
+    <string name="premium_feature_2">Analiză Avansată a Amprentei Digitale</string>
+    <string name="premium_feature_3">Prioritizare în Rețeaua ONG-urilor Jurnalistice</string>
+    <string name="premium_feature_4">Ștergere Militară (Wipe) Automată a Dispozitivului la Pericol</string>
+    <string name="premium_feature_5">Distorsionare Vocală (Anti-Recunoaștere Audio)</string>
+    <string name="premium_feature_6">Modul "Zero-Trace" (Șterge copia locală după trimitere)</string>
+    <string name="premium_feature_7">Dead Man\'s Switch (Ștergere automată la inactivitate)</string>
+    <string name="pro_voice_obfuscation">Filtru Anonimizare Voce (Pitch Shifting)</string>
+    <string name="pro_burn_after_send">Distruge copia locală imediat după trimitere (Zero-Trace)</string>
+    <string name="premium_upgrade_button">Activează Protecția PRO (Gratuit)</string>
+    <string name="premium_coming_soon">Se conectează la rețeaua de securitate PRO...\nServiciul vă va fi alocat în curând de către un ONG partener.</string>
+    <string name="privacy_policy_title">Politica de Confidențialitate &amp; Termeni</string>
+    <string name="rate_app_button">Evaluează Aplicația (Google Play)</string>
+    <string name="theme_settings_title">Aparență / Temă</string>
+    <string name="theme_system">La fel ca sistemul</string>
+    <string name="theme_light">Modul Luminos</string>
+    <string name="theme_dark">Modul Întunecat</string>
+
+    <string name="security_setup_title">Configurare Parolă (Camuflaj)</string>
+    <string name="security_setup_btn">Activează PIN &amp; Parola Falsă</string>
+    <string name="security_remove_btn">Dezactivează Securitatea</string>
+    <string name="pin_real_placeholder">PIN Real (min 4 cifre)</string>
+    <string name="pin_decoy_placeholder">PIN Fals (Declanșează ștergerea)</string>
+    <string name="pin_save">Salvează PIN-uri</string>
+
+    <string name="tooltip_evidence_title">Dovezi &amp; Curățare EXIF</string>
+    <string name="tooltip_evidence_desc">Toate fișierele atașate sunt curățate automat de metadate (inclusiv locația GPS) și criptate direct pe telefon cu AES-256 înainte de trimitere. Nimeni nu le poate citi în tranzit.</string>
+    <string name="tooltip_profile_title">Anonim vs. Oficial</string>
+    <string name="tooltip_profile_desc">Anonim: Identitatea ta rămâne complet secretă.\nOficial: Datele tale din Profil vor fi incluse în sesizare pentru a putea fi contactat direct de procurori sau jurnaliști.</string>
+    <string name="tooltip_tracking_title">Codul de Urmărire Q&amp;A</string>
+    <string name="tooltip_tracking_desc">Sistemul generează un cod unic pe telefon. Dacă autoritățile au întrebări suplimentare, le poți răspunde prin acel cod fără să-ți dezvălui identitatea.</string>
+
+    <string name="ai_playback_btn">Ascultă Înregistrarea</string>
+    <string name="ai_playback_playing">Se redă...</string>
+    <string name="ai_playback_error">Fișier audio indisponibil pentru redare.</string>
 </resources>

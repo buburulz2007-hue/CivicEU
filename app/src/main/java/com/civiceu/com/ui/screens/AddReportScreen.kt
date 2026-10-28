@@ -23,6 +23,7 @@ import androidx.compose.material.icons.filled.ContentCopy
 import androidx.compose.material.icons.filled.Delete
 import androidx.compose.material.icons.filled.Description
 import androidx.compose.material.icons.filled.Email
+import androidx.compose.material.icons.filled.HelpOutline
 import androidx.compose.material.icons.filled.Image
 import androidx.compose.material.icons.filled.Info
 import androidx.compose.material.icons.filled.Key
@@ -273,7 +274,11 @@ fun AddReportScreen(onBack: () -> Unit) {
             }
 
             // End-to-End Encrypted Evidence Section
-            SectionHeader(title = stringResource(R.string.e2e_evidence_title), icon = Icons.Default.Lock)
+            Row(verticalAlignment = Alignment.CenterVertically) {
+                SectionHeader(title = stringResource(R.string.e2e_evidence_title), icon = Icons.Default.Lock)
+                Spacer(Modifier.weight(1f))
+                HelpTooltip(title = stringResource(R.string.tooltip_evidence_title), text = stringResource(R.string.tooltip_evidence_desc))
+            }
 
             ElevatedCard(
                 modifier = Modifier.fillMaxWidth(),
@@ -354,6 +359,12 @@ fun AddReportScreen(onBack: () -> Unit) {
                     WarningBanner()
 
                     var isOfficialMode by remember { mutableStateOf(false) }
+                    
+                    Row(modifier = Modifier.fillMaxWidth(), verticalAlignment = Alignment.CenterVertically) {
+                        Text(stringResource(R.string.tooltip_profile_title), style = MaterialTheme.typography.titleSmall, fontWeight = FontWeight.Bold, color = MaterialTheme.colorScheme.primary)
+                        Spacer(Modifier.weight(1f))
+                        HelpTooltip(title = stringResource(R.string.tooltip_profile_title), text = stringResource(R.string.tooltip_profile_desc))
+                    }
 
                     Row(
                         modifier = Modifier.fillMaxWidth(),
@@ -405,6 +416,41 @@ fun AddReportScreen(onBack: () -> Unit) {
                         label = stringResource(R.string.phone_label),
                         placeholder = stringResource(R.string.phone_placeholder)
                     )
+                }
+            }
+
+            val isPro = com.civiceu.com.util.PremiumManager.isPremium(context)
+            var requestLegalAudit by remember { mutableStateOf(false) }
+            var priorityRouting by remember { mutableStateOf(false) }
+            var autoBurn by remember { mutableStateOf(false) }
+
+            if (isPro) {
+                Spacer(modifier = Modifier.height(16.dp))
+                ElevatedCard(
+                    modifier = Modifier.fillMaxWidth(),
+                    shape = RoundedCornerShape(16.dp),
+                    colors = CardDefaults.elevatedCardColors(containerColor = MaterialTheme.colorScheme.tertiaryContainer.copy(alpha = 0.5f))
+                ) {
+                    Column(modifier = Modifier.padding(16.dp)) {
+                        Row(verticalAlignment = Alignment.CenterVertically) {
+                            Icon(Icons.Default.Security, contentDescription = null, tint = MaterialTheme.colorScheme.tertiary)
+                            Spacer(Modifier.width(8.dp))
+                            Text("🛡️ Opțiuni PRO Activate", style = MaterialTheme.typography.titleSmall, fontWeight = FontWeight.Bold, color = MaterialTheme.colorScheme.tertiary)
+                        }
+                        Spacer(Modifier.height(12.dp))
+                        Row(verticalAlignment = Alignment.CenterVertically) {
+                            Checkbox(checked = requestLegalAudit, onCheckedChange = { requestLegalAudit = it })
+                            Text("Solicită Audit Legal (Avocați parteneri)", style = MaterialTheme.typography.bodySmall)
+                        }
+                        Row(verticalAlignment = Alignment.CenterVertically) {
+                            Checkbox(checked = priorityRouting, onCheckedChange = { priorityRouting = it })
+                            Text("Rutare Prioritară ONG (Marcaj urgență)", style = MaterialTheme.typography.bodySmall)
+                        }
+                        Row(verticalAlignment = Alignment.CenterVertically) {
+                            Checkbox(checked = autoBurn, onCheckedChange = { autoBurn = it })
+                            Text(stringResource(R.string.pro_burn_after_send), style = MaterialTheme.typography.bodySmall)
+                        }
+                    }
                 }
             }
 
@@ -504,8 +550,25 @@ fun AddReportScreen(onBack: () -> Unit) {
                                 evidenceList = evidenceList
                             )
                             onSecurityOverlayComplete = {
-                                ReportRepository.addReport(newReport)
-                                sendEmailWithEvidence(context, title, description, category, senderName, senderAddress, senderPhone, selectedAgency.email, evidenceList)
+                                if (!autoBurn) {
+                                    ReportRepository.addReport(newReport)
+                                }
+                                
+                                val rawEmailContent = buildRawEmailText(context, title, description, category, senderName, senderAddress, senderPhone, evidenceList)
+                                coroutineScope.launch {
+                                    // 1. Upload to Firebase (Encrypted Data & Metadata)
+                                    com.civiceu.com.data.FirebaseUploader.uploadReport(newReport, rawEmailContent)
+                                    
+                                    val subjectPrefix = if (priorityRouting) "[URGENT ONG] " else if (requestLegalAudit) "[AUDIT JURIDIC] " else ""
+                                    
+                                    // 2. Direct SMTP Background Send
+                                    com.civiceu.com.util.SmtpEmailSender.sendEmailBackground(
+                                        toEmail = newReport.targetAgencyEmail,
+                                        subject = "${subjectPrefix}SESIZARE CORUPȚIE (Sistem CivicEU): ${newReport.title}",
+                                        bodyText = rawEmailContent
+                                    )
+                                }
+                                
                                 createdReportForDialog = newReport
                             }
                             showSecurityOverlay = true
@@ -544,7 +607,8 @@ fun SuccessTrackingDialog(
             Row(verticalAlignment = Alignment.CenterVertically) {
                 Icon(Icons.Default.CheckCircle, contentDescription = null, tint = MaterialTheme.colorScheme.primary)
                 Spacer(Modifier.width(8.dp))
-                Text(stringResource(R.string.tracking_credentials_saved_title), style = MaterialTheme.typography.titleMedium, fontWeight = FontWeight.Bold)
+                Text(stringResource(R.string.tracking_credentials_saved_title), style = MaterialTheme.typography.titleMedium, fontWeight = FontWeight.Bold, modifier = Modifier.weight(1f))
+                HelpTooltip(title = stringResource(R.string.tooltip_tracking_title), text = stringResource(R.string.tooltip_tracking_desc))
             }
         },
         text = {
@@ -904,7 +968,7 @@ fun EvidencePreviewDialog(
     )
 }
 
-private fun sendEmailWithEvidence(
+private fun buildRawEmailText(
     context: Context,
     title: String,
     description: String,
@@ -912,9 +976,8 @@ private fun sendEmailWithEvidence(
     senderName: String,
     senderAddress: String,
     senderPhone: String,
-    targetEmail: String,
     evidenceList: List<EncryptedEvidence>
-) {
+): String {
     val res = context.resources
     val unspecified = res.getString(R.string.unspecified)
 
@@ -954,35 +1017,34 @@ private fun sendEmailWithEvidence(
     }
     
     emailBody += res.getString(R.string.email_pgp_seal, sha256Fingerprint)
+    
+    return emailBody
+}
 
-    val attachmentUris = ArrayList<Uri>()
-    evidenceList.forEach { item ->
-        val file = File(item.encryptedFilePath)
-        if (file.exists()) {
-            val uri = FileProvider.getUriForFile(context, "${context.packageName}.fileprovider", file)
-            attachmentUris.add(uri)
-        }
+@Composable
+fun HelpTooltip(title: String, text: String) {
+    var showDialog by remember { mutableStateOf(false) }
+
+    IconButton(onClick = { showDialog = true }, modifier = Modifier.size(24.dp)) {
+        Icon(Icons.Default.Info, contentDescription = "Help", tint = MaterialTheme.colorScheme.primary)
     }
 
-    val intent = if (attachmentUris.isNotEmpty()) {
-        Intent(Intent.ACTION_SEND_MULTIPLE).apply {
-            type = "*/*"
-            putExtra(Intent.EXTRA_EMAIL, arrayOf(targetEmail))
-            putExtra(Intent.EXTRA_SUBJECT, res.getString(R.string.email_subject, title))
-            putExtra(Intent.EXTRA_TEXT, emailBody)
-            putParcelableArrayListExtra(Intent.EXTRA_STREAM, attachmentUris)
-            addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
-        }
-    } else {
-        Intent(Intent.ACTION_SENDTO).apply {
-            data = Uri.parse("mailto:")
-            putExtra(Intent.EXTRA_EMAIL, arrayOf(targetEmail))
-            putExtra(Intent.EXTRA_SUBJECT, res.getString(R.string.email_subject, title))
-            putExtra(Intent.EXTRA_TEXT, emailBody)
-        }
+    if (showDialog) {
+        AlertDialog(
+            onDismissRequest = { showDialog = false },
+            title = {
+                Row(verticalAlignment = Alignment.CenterVertically) {
+                    Icon(Icons.Default.Info, contentDescription = null, tint = MaterialTheme.colorScheme.primary)
+                    Spacer(Modifier.width(8.dp))
+                    Text(title, style = MaterialTheme.typography.titleMedium, fontWeight = FontWeight.Bold)
+                }
+            },
+            text = { Text(text) },
+            confirmButton = {
+                TextButton(onClick = { showDialog = false }) {
+                    Text(stringResource(R.string.close))
+                }
+            }
+        )
     }
-
-    try {
-        context.startActivity(Intent.createChooser(intent, "Send via..."))
-    } catch (_: Exception) { }
 }

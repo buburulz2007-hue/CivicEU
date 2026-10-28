@@ -130,4 +130,55 @@
     <string name="onboarding_button">Capito, inizia</string>
 
     <string name="email_pgp_seal">\n\n--- SECURE CIVIC EU SEAL ---\nQuesto messaggio è stato generato e verificato dalla piattaforma sicura CivicEU. L\'integrità dei dati è garantita digitalmente.\nImpronta Digitale SHA-256: %1$s\n------------------------------</string>
+
+    <string name="impact_title">Impatto e Trasparenza</string>
+    <string name="impact_button">Impatto e Statistiche</string>
+    <string name="global_stats_title">Indicatori Globali</string>
+    <string name="total_reports_ue">Segnalazioni inviate (UE)</string>
+    <string name="anonymous_reports">Anonimo</string>
+    <string name="assumed_reports">Ufficiale</string>
+    <string name="avg_time">Tempo medio di trasmissione</string>
+    <string name="avg_time_val">&lt; 2 minuti</string>
+    <string name="map_section_title">Distribuzione Europea</string>
+    <string name="map_section_desc">Per sicurezza, mostriamo solo i totali per paese.</string>
+    <string name="institutions_section_title">Monitoraggio Istituzioni</string>
+    <string name="inst_col_name">Istituzione</string>
+    <string name="inst_col_sent">Inviate</string>
+    <string name="inst_col_ack">Confermate</string>
+    <string name="inst_col_status">Stato</string>
+
+    <string name="premium_button">Protezione Legale PRO</string>
+    <string name="premium_title">Scudo Premium</string>
+    <string name="premium_desc_1">Come segnalante, la tua sicurezza è la priorità. Passa a PRO per un\'analisi dei rischi legali prima della segnalazione.</string>
+    <string name="premium_feature_1">Audit legale da parte di avvocati partner</string>
+    <string name="premium_feature_2">Analisi avanzata dell\'impronta digitale</string>
+    <string name="premium_feature_3">Instradamento prioritario alle reti di ONG</string>
+    <string name="premium_feature_4">Cancellazione di emergenza (Wipe) in caso di pericolo</string>
+    <string name="premium_feature_5">Offuscamento vocale (Anti-riconoscimento audio)</string>
+    <string name="premium_feature_6">Modalità Zero-Trace (Elimina copia locale dopo l\'invio)</string>
+    <string name="premium_feature_7">Dead Man\'s Switch (Cancellazione automatica in caso di inattività)</string>
+    <string name="pro_voice_obfuscation">Applica filtro di anonimizzazione vocale (Pitch Shifting)</string>
+    <string name="pro_burn_after_send">Distruggi la copia locale immediatamente dopo l\'invio (Zero-Trace)</string>
+    <string name="premium_upgrade_button">Attiva Protezione PRO (Gratis)</string>
+    <string name="premium_coming_soon">Connessione alla rete di sicurezza PRO...\nIl servizio ti sarà assegnato a breve da una ONG partner.</string>
+    <string name="privacy_policy_title">Privacy Policy &amp; Termini</string>
+    <string name="rate_app_button">Valuta l\'app (Google Play)</string>
+    <string name="theme_settings_title">Aspetto / Tema</string>
+    <string name="theme_system">Predefinito di sistema</string>
+    <string name="theme_light">Modalità Chiara</string>
+    <string name="theme_dark">Modalità Scura</string>
+
+    <string name="security_setup_title">Password (Esca)</string>
+    <string name="security_setup_btn">Attiva PIN &amp; Esca</string>
+    <string name="security_remove_btn">Disattiva Sicurezza</string>
+    <string name="pin_real_placeholder">PIN Reale (min 4 cifre)</string>
+    <string name="pin_decoy_placeholder">PIN Esca (Elimina dati)</string>
+    <string name="pin_save">Salva</string>
+
+    <string name="tooltip_evidence_title">Prove &amp; Pulizia EXIF</string>
+    <string name="tooltip_evidence_desc">Tutti i file allegati vengono automaticamente privati dei metadati (incluso il GPS) e crittografati localmente con AES-256 prima della trasmissione.</string>
+    <string name="tooltip_profile_title">Anonimo vs. Ufficiale</string>
+    <string name="tooltip_profile_desc">Anonimo: La tua identità rimane segreta.\nUfficiale: I tuoi dati del profilo vengono inclusi affinché le autorità possano contattarti.</string>
+    <string name="tooltip_tracking_title">Codice di Monitoraggio (Q&amp;A)</string>
+    <string name="tooltip_tracking_desc">Il sistema genera un codice univoco. Se le autorità hanno domande, puoi rispondere in modo anonimo utilizzando questo codice.</string>
 </resources>

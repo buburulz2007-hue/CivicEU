@@ -22,13 +22,19 @@ import kotlinx.coroutines.delay
 fun SecurityProcessingDialog(onComplete: () -> Unit) {
     var step by remember { mutableStateOf(0) }
 
+    val context = androidx.compose.ui.platform.LocalContext.current
     LaunchedEffect(Unit) {
+        val isPro = com.civiceu.com.util.PremiumManager.isPremium(context)
         delay(1200)
         step = 1
         delay(1500)
         step = 2
         delay(1500)
         step = 3
+        if (isPro) {
+            delay(1000)
+            step = 4
+        }
         delay(800)
         onComplete()
     }
@@ -57,29 +63,48 @@ fun SecurityProcessingDialog(onComplete: () -> Unit) {
 
                 HorizontalDivider(thickness = 0.5.dp, color = MaterialTheme.colorScheme.outlineVariant)
 
+                val isPro = com.civiceu.com.util.PremiumManager.isPremium(androidx.compose.ui.platform.LocalContext.current)
+
+                if (isPro) {
+                    SecurityStepRow(
+                        isLoading = step == 0,
+                        isDone = step >= 1,
+                        loadingText = "Se execută analiza avansată a amprentei digitale...",
+                        doneText = "[Analiză PRO completă - Sigur]"
+                    )
+                }
+
                 // Step 1: Metadata
-                SecurityStepRow(
-                    isLoading = step == 0,
-                    isDone = step >= 1,
-                    loadingText = stringResource(R.string.sec_step1_loading),
-                    doneText = stringResource(R.string.sec_step1_done)
-                )
+                if (!isPro || step >= 1) {
+                    val step1Loading = if (isPro) step == 1 else step == 0
+                    val step1Done = if (isPro) step >= 2 else step >= 1
+                    SecurityStepRow(
+                        isLoading = step1Loading,
+                        isDone = step1Done,
+                        loadingText = stringResource(R.string.sec_step1_loading),
+                        doneText = stringResource(R.string.sec_step1_done)
+                    )
+                }
 
                 // Step 2: Encryption
-                if (step >= 1) {
+                if ((isPro && step >= 2) || (!isPro && step >= 1)) {
+                    val step2Loading = if (isPro) step == 2 else step == 1
+                    val step2Done = if (isPro) step >= 3 else step >= 2
                     SecurityStepRow(
-                        isLoading = step == 1,
-                        isDone = step >= 2,
+                        isLoading = step2Loading,
+                        isDone = step2Done,
                         loadingText = stringResource(R.string.sec_step2_loading),
                         doneText = stringResource(R.string.sec_step2_done)
                     )
                 }
 
                 // Step 3: Secure Connection
-                if (step >= 2) {
+                if ((isPro && step >= 3) || (!isPro && step >= 2)) {
+                    val step3Loading = if (isPro) step == 3 else step == 2
+                    val step3Done = if (isPro) step >= 4 else step >= 3
                     SecurityStepRow(
-                        isLoading = step == 2,
-                        isDone = step >= 3,
+                        isLoading = step3Loading,
+                        isDone = step3Done,
                         loadingText = stringResource(R.string.sec_step3_loading),
                         doneText = stringResource(R.string.sec_step3_done)
                     )

@@ -205,4 +205,55 @@
     <string name="onboarding_button">I understand, continue</string>
 
     <string name="email_pgp_seal">\n\n--- SECURE CIVIC EU SEAL ---\nThis message was generated and verified by the secure CivicEU platform. Data integrity is digitally guaranteed.\nSHA-256 Digital Fingerprint: %1$s\n------------------------------</string>
+
+    <string name="impact_title">Impact &amp; Transparency</string>
+    <string name="impact_button">Impact &amp; Stats</string>
+    <string name="global_stats_title">Global Impact Indicators</string>
+    <string name="total_reports_ue">Total reports sent (EU)</string>
+    <string name="anonymous_reports">Anonymous</string>
+    <string name="assumed_reports">Official</string>
+    <string name="avg_time">Average transmission time</string>
+    <string name="avg_time_val">&lt; 2 minutes</string>
+    <string name="map_section_title">European Distribution</string>
+    <string name="map_section_desc">For security reasons (OpSec), we exclusively display country-level totals. Precise locations are not recorded.</string>
+    <string name="institutions_section_title">Institution Monitoring (Public Pressure)</string>
+    <string name="inst_col_name">Institution</string>
+    <string name="inst_col_sent">Sent</string>
+    <string name="inst_col_ack">Ack</string>
+    <string name="inst_col_status">Avg. Status</string>
+
+    <string name="premium_button">Legal Protection PRO</string>
+    <string name="premium_title">Premium Legal Shield</string>
+    <string name="premium_desc_1">As a Whistleblower, your safety comes first. Upgrade to PRO for direct consultation and legal risk analysis before blowing the whistle.</string>
+    <string name="premium_feature_1">Pre-Submission Legal Audit by Partner Lawyers</string>
+    <string name="premium_feature_2">Advanced Digital Footprint Analysis</string>
+    <string name="premium_feature_3">Priority Routing to NGO Investigative Networks</string>
+    <string name="premium_feature_4">Military-Grade Panic Wipe (Auto-delete app data in danger)</string>
+    <string name="premium_feature_5">Voice Obfuscation (Audio Anti-Recognition)</string>
+    <string name="premium_feature_6">Zero-Trace Mode (Burn local copy after sending)</string>
+    <string name="premium_feature_7">Dead Man\'s Switch (Auto-wipe on inactivity)</string>
+    <string name="pro_voice_obfuscation">Apply Voice Anonymization Filter (Pitch Shifting)</string>
+    <string name="pro_burn_after_send">Destroy local copy immediately after sending (Zero-Trace)</string>
+    <string name="premium_upgrade_button">Activate PRO Shield (Free)</string>
+    <string name="premium_coming_soon">Connecting to PRO security network...\nService will be allocated to you soon by a partner NGO.</string>
+    <string name="privacy_policy_title">Privacy Policy &amp; Terms</string>
+    <string name="rate_app_button">Rate App on Google Play</string>
+    <string name="theme_settings_title">Appearance / Theme</string>
+    <string name="theme_system">System Default</string>
+    <string name="theme_light">Light Mode</string>
+    <string name="theme_dark">Dark Mode</string>
+
+    <string name="security_setup_title">Password Setup (Decoy)</string>
+    <string name="security_setup_btn">Enable PIN &amp; Decoy Password</string>
+    <string name="security_remove_btn">Disable Security</string>
+    <string name="pin_real_placeholder">Real PIN (min 4 digits)</string>
+    <string name="pin_decoy_placeholder">Decoy PIN (Triggers wipe)</string>
+    <string name="pin_save">Save PINs</string>
+
+    <string name="tooltip_evidence_title">Evidence &amp; EXIF Stripping</string>
+    <string name="tooltip_evidence_desc">All attached files are automatically stripped of metadata (including GPS location) and encrypted locally with AES-256 before transmission.</string>
+    <string name="tooltip_profile_title">Anonymous vs. Official</string>
+    <string name="tooltip_profile_desc">Anonymous: Your identity remains completely secret.\nOfficial: Your Profile data is included in the report so authorities can contact you.</string>
+    <string name="tooltip_tracking_title">Q&amp;A Tracking Code</string>
+    <string name="tooltip_tracking_desc">The system generates a unique code on your device. If authorities have follow-up questions, you can answer them using this code without revealing your identity.</string>
 </resources>

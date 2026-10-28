@@ -42,4 +42,9 @@ object ReportRepository {
             }
         }
     }
+
+    // Funcție de ștergere totală pentru modul de Camuflaj/Wipe
+    fun clearAll() {
+        _reports.value = emptyList()
+    }
 }

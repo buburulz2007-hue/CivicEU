@@ -4,21 +4,34 @@
     android:height="108dp"
     android:viewportWidth="108"
     android:viewportHeight="108">
-    <!-- Shield Outline -->
+
+    <!-- Outer Shield Frame / Border (Metallic Silver) -->
     <path
+        android:fillColor="#1C2833"
+        android:strokeColor="#CFD8DC"
+        android:strokeWidth="4"
+        android:pathData="M54,12 C38,14 26,20 20,30 C20,62 34,82 54,96 C74,82 88,62 88,30 C82,20 70,14 54,12 Z" />
+
+    <!-- Inner Shield Background (Dark Cyber Blue) -->
+    <path
+        android:fillColor="#09101D"
+        android:pathData="M54,16 C40,18 30,23 24,32 C24,58 36,76 54,90 C72,76 84,58 84,32 C78,23 68,18 54,16 Z" />
+
+    <!-- Circuit Trace Lines (Glowing Cyan) -->
+    <path
+        android:strokeColor="#00E5FF"
+        android:strokeWidth="1.8"
+        android:strokeLineCap="round"
         android:fillColor="#00000000"
-        android:pathData="M54,20 C40,20 30,25 24,35 C24,60 35,80 54,88 C73,80 84,60 84,35 C78,25 68,20 54,20Z"
-        android:strokeAlpha="0.8"
-        android:strokeColor="@color/white"
-        android:strokeWidth="2" />
+        android:pathData="M54,24 L54,82 M38,38 L54,38 M54,50 L70,50 M40,64 L54,64 M34,30 L46,30 L46,46 M74,30 L62,30 L62,62 M48,74 L54,74 L54,82" />
 
-    <!-- Justice Scale / Balance Symbol -->
+    <!-- Circuit Nodes / Glowing Cyan & White Dots -->
     <path
-        android:fillColor="@color/white"
-        android:pathData="M54,38 L54,70 M40,45 L68,45 M40,45 L36,55 M68,45 L72,55 M30,55 L42,55 L36,65 Z M60,55 L72,55 L66,65 Z" />
+        android:fillColor="#FFFFFF"
+        android:pathData="M54,24 A2.5,2.5 0 1,1 54,29 A2.5,2.5 0 1,1 54,24 Z M38,38 A2,2 0 1,1 38,42 A2,2 0 1,1 38,38 Z M70,50 A2,2 0 1,1 70,54 A2,2 0 1,1 70,50 Z M40,64 A2,2 0 1,1 40,68 A2,2 0 1,1 40,64 Z M34,30 A2,2 0 1,1 34,34 A2,2 0 1,1 34,30 Z M74,30 A2,2 0 1,1 74,34 A2,2 0 1,1 74,30 Z" />
 
-    <!-- Accent Dot -->
+    <!-- Central Reflection Highlight -->
     <path
-        android:fillColor="#FFD700"
-        android:pathData="M54,34 A2,2 0 1,1 54,38 A2,2 0 1,1 54,34" />
+        android:fillColor="#15FFFFFF"
+        android:pathData="M54,16 C45,16 35,22 30,35 C35,30 45,22 54,20 Z" />
 </vector>
